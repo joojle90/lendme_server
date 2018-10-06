@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+//SELECT RECORD
+exports.STYLE_SELECTIVE = "SELECT style_item, item1, item2, item3, item4, item5, mark_status, remark " +
+    "FROM app_style WHERE 1=1";
+//INSERT RECORD
+exports.INS_APP_STYLE_SELECTIVE = "INSERT INTO app_style (style_item, insert_by, insert_date, update_by, update_date, item1, item2, item3, item4, item5) VALUES ?";
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJvdXRlcy9zdHlsZS9xX3N0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsZUFBZTtBQUNGLFFBQUEsZUFBZSxHQUFHLDRFQUE0RTtJQUMxRywwQkFBMEIsQ0FBQztBQUU1QixlQUFlO0FBQ0YsUUFBQSx1QkFBdUIsR0FBRyxnSUFBZ0ksQ0FBQyIsImZpbGUiOiJyb3V0ZXMvc3R5bGUvcV9zdHlsZS5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vU0VMRUNUIFJFQ09SRFxuZXhwb3J0IGNvbnN0IFNUWUxFX1NFTEVDVElWRSA9IGBTRUxFQ1Qgc3R5bGVfaXRlbSwgaXRlbTEsIGl0ZW0yLCBpdGVtMywgaXRlbTQsIGl0ZW01LCBtYXJrX3N0YXR1cywgcmVtYXJrIGArXG5cdGBGUk9NIGFwcF9zdHlsZSBXSEVSRSAxPTFgO1xuXG4vL0lOU0VSVCBSRUNPUkRcbmV4cG9ydCBjb25zdCBJTlNfQVBQX1NUWUxFX1NFTEVDVElWRSA9IGBJTlNFUlQgSU5UTyBhcHBfc3R5bGUgKHN0eWxlX2l0ZW0sIGluc2VydF9ieSwgaW5zZXJ0X2RhdGUsIHVwZGF0ZV9ieSwgdXBkYXRlX2RhdGUsIGl0ZW0xLCBpdGVtMiwgaXRlbTMsIGl0ZW00LCBpdGVtNSkgVkFMVUVTID9gOyJdfQ==

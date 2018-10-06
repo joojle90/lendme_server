@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+//SELECT RECORD
+exports.MENU_SELECTIVE = "SELECT menu_id, module_id, module_type, full_desc, menu_api, order_seq, level_id, mark_status, remark " +
+    "FROM app_menu WHERE 1=1";
+//INSERT RECORD
+exports.INS_APP_MENU_SELECTIVE = "INSERT INTO app_menu (menu_id, insert_by, insert_date, update_by, update_date, module_id, full_desc, full_desc_english) VALUES ?";
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJvdXRlcy9tZW51L3FfbWVudS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGVBQWU7QUFDRixRQUFBLGNBQWMsR0FBRyx3R0FBd0c7SUFDckkseUJBQXlCLENBQUM7QUFFM0IsZUFBZTtBQUNGLFFBQUEsc0JBQXNCLEdBQUcsa0lBQWtJLENBQUMiLCJmaWxlIjoicm91dGVzL21lbnUvcV9tZW51LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy9TRUxFQ1QgUkVDT1JEXG5leHBvcnQgY29uc3QgTUVOVV9TRUxFQ1RJVkUgPSBgU0VMRUNUIG1lbnVfaWQsIG1vZHVsZV9pZCwgbW9kdWxlX3R5cGUsIGZ1bGxfZGVzYywgbWVudV9hcGksIG9yZGVyX3NlcSwgbGV2ZWxfaWQsIG1hcmtfc3RhdHVzLCByZW1hcmsgYCtcblx0YEZST00gYXBwX21lbnUgV0hFUkUgMT0xYDtcblxuLy9JTlNFUlQgUkVDT1JEXG5leHBvcnQgY29uc3QgSU5TX0FQUF9NRU5VX1NFTEVDVElWRSA9IGBJTlNFUlQgSU5UTyBhcHBfbWVudSAobWVudV9pZCwgaW5zZXJ0X2J5LCBpbnNlcnRfZGF0ZSwgdXBkYXRlX2J5LCB1cGRhdGVfZGF0ZSwgbW9kdWxlX2lkLCBmdWxsX2Rlc2MsIGZ1bGxfZGVzY19lbmdsaXNoKSBWQUxVRVMgP2A7Il19
