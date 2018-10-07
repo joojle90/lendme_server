@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+/*const jwt = require('jsonwebtoken');
 const config = require('./config').SYSTEM_CONFIG;
 
 export = (req:any, res:any, next:any) => {
@@ -25,4 +25,4 @@ export = (req:any, res:any, next:any) => {
 			"message": 'No token provided.'
 		});
 	}
-};
+};*/

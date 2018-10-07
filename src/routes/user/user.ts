@@ -11,68 +11,68 @@ const db = require('../../database/db.service');
 const passport = require('passport');
 const authentication = require('../../utils/authentication');
 
-const jwt = require('jsonwebtoken');
-const config = require('../../utils/config').SYSTEM_CONFIG;
-const tokenList = {};
+// const jwt = require('jsonwebtoken');
+// const config = require('../../utils/config').SYSTEM_CONFIG;
+// const tokenList = {};
 
-router.post('/login', (req:any ,res:any) => {
-	const postData = req.body;
-	const user = {
-		"email": postData.email,
-		"name": postData.name
-	};
-	console.log("postData login", postData);
-	console.log("user details login", user);
-	// do the database authentication here, with user name and password combination.
-	const token = jwt.sign(user, config.secret, { expiresIn: config.tokenLife});
-	const refreshToken = jwt.sign(user, config.refreshTokenSecret, { expiresIn: config.refreshTokenLife});
-	const response = {
-		"status": "Logged in",
-		"token": token,
-		"refreshToken": refreshToken,
-	};
-	tokenList[refreshToken] = response;
-	res.status(200).json(response);
-});
+// router.post('/login', (req:any ,res:any) => {
+// 	const postData = req.body;
+// 	const user = {
+// 		"email": postData.email,
+// 		"name": postData.name
+// 	};
+// 	console.log("postData login", postData);
+// 	console.log("user details login", user);
+// 	// do the database authentication here, with user name and password combination.
+// 	const token = jwt.sign(user, config.secret, { expiresIn: config.tokenLife});
+// 	const refreshToken = jwt.sign(user, config.refreshTokenSecret, { expiresIn: config.refreshTokenLife});
+// 	const response = {
+// 		"status": "Logged in",
+// 		"token": token,
+// 		"refreshToken": refreshToken,
+// 	};
+// 	tokenList[refreshToken] = response;
+// 	res.status(200).json(response);
+// });
 
-router.post('/sign-in', (req: any, res: any, next: any) => {
-	const postRequest = req.body;
-	const user = {
-		"userId": postRequest.params.userId,
-		"password": postRequest.params.password
-	};
+// router.post('/sign-in', (req: any, res: any, next: any) => {
+// 	const postRequest = req.body;
+// 	const user = {
+// 		"userId": postRequest.params.userId,
+// 		"password": postRequest.params.password
+// 	};
 
-	console.log("user details signin", user);
-	// do the database authentication here, with user name and password combination.
-	passport.authenticate('local-sign-in', (err: any, user: any, info: any) => {
-		console.log("user", user);
-		user = true;
-		if (err) {
-			return res.status(401).send({message: err.message});
-		}
-		if (!user) {
-			return res.status(401).send({message: info.message});
-		}
-		req.logIn(user, (err: any) => {
-			if (err) {
-				return res.status(401).send({message: err.message});
-			}
-			console.log("req.user", req.user);
-			return res.status(200).json(req.user);
-		});
-	})(req, res, next);
+// 	console.log("user details signin", user);
+// 	// do the database authentication here, with user name and password combination.
+// 	passport.authenticate('local-sign-in', (err: any, user: any, info: any) => {
+// 		console.log("user", user);
+// 		user = true;
+// 		if (err) {
+// 			return res.status(401).send({message: err.message});
+// 		}
+// 		if (!user) {
+// 			return res.status(401).send({message: info.message});
+// 		}
+// 		req.logIn(user, (err: any) => {
+// 			if (err) {
+// 				return res.status(401).send({message: err.message});
+// 			}
+// 			console.log("req.user", req.user);
+// 			return res.status(200).json(req.user);
+// 		});
+// 	})(req, res, next);
 
 
-	const token = jwt.sign(user, config.secret, { expiresIn: config.tokenLife});
-	const refreshToken = jwt.sign(user, config.refreshTokenSecret, { expiresIn: config.refreshTokenLife});
-	const response = {
-		"status": "Logged in",
-		"token": token,
-		"refreshToken": refreshToken,
-	};
-	tokenList[refreshToken] = response;
-	res.status(200).json(response);
-});
+// 	const token = jwt.sign(user, config.secret, { expiresIn: config.tokenLife});
+// 	const refreshToken = jwt.sign(user, config.refreshTokenSecret, { expiresIn: config.refreshTokenLife});
+// 	const response = {
+// 		"status": "Logged in",
+// 		"token": token,
+// 		"refreshToken": refreshToken,
+// 	};
+// 	tokenList[refreshToken] = response;
+// 	res.status(200).json(response);
+// });
 
 /*router.post('/sign-in', (req: any, res: any, next: any) => {
 	console.log('---- User login: here');
@@ -110,7 +110,7 @@ router.post('/sign-in', (req: any, res: any, next: any) => {
 	})(req, res, next);
 });*/
 
-router.use(require('../../utils/token-checker'));
+// router.use(require('../../utils/token-checker'));
 // get all user
 router.get('/user', (req: any, res: any) => {
 	db.getConnection((err: any, connection: any) => {

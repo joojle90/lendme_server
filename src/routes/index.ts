@@ -5,3 +5,6 @@ export * from './refcode/q_refcode';
 export * from './refgroup/q_refgroup';
 export * from './style/q_style';
 export * from './user/q_user';
+export * from './customer/q_customer';
+export * from './audit/q_audit';
+export * from './log/q_log';

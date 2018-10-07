@@ -64,6 +64,9 @@ const refgroup_routes = require('./routes/refgroup/refgroup');
 const style_routes = require('./routes/style/style');
 const project_routes = require('./routes/project/project');
 const user_routes = require('./routes/user/user');
+const customer_routes = require('./routes/customer/customer');
+const audit_routes = require('./routes/audit/audit');
+const log_routes = require('./routes/log/log');
 
 app.use('/api', module_routes);
 app.use('/api', menu_routes);
@@ -72,6 +75,9 @@ app.use('/api', refgroup_routes);
 app.use('/api', style_routes);
 app.use('/api', project_routes);
 app.use('/api', user_routes);
+app.use('/api', customer_routes);
+app.use('/api', audit_routes);
+app.use('/api', log_routes);
 
 //app.get('/', (req: any, res: any) => {
 //	res.sendFile(path.resolve(__dirname, '../client/index.html'));

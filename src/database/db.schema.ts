@@ -166,14 +166,19 @@ const schema = (db: any) => {
 		'  `last_name` varchar(50) NOT NULL,\n' +
 		'  `ic_no` varchar(30) NOT NULL,\n' +
 		'  `date_of_birth` datetime NOT NULL,\n' +
+		'  `gender` char(1) NOT NULL,\n' +
+		'  `account_no` varchar(50) NOT NULL,\n' +
 		'  `profile_rate` int(11) NOT NULL,\n' +
 		'  `address1` varchar(50) NOT NULL,\n' +
 		'  `address2` varchar(50) NOT NULL,\n' +
 		'  `address3` varchar(50) DEFAULT NULL,\n' +
 		'  `postal_code` varchar(50) NOT NULL,\n' +
+		'  `city` varchar(50) NOT NULL,\n' +
 		'  `state` varchar(50) NOT NULL,\n' +
 		'  `country` varchar(50) NOT NULL,\n' +
 		'  `mobile_no` varchar(50) NOT NULL,\n' +
+		'  `email` varchar(100) NOT NULL,\n' +
+		'  `image` varchar(100) DEFAULT NULL,\n' +
 		'  `emergency_contact_no` varchar(50) NOT NULL,\n' +
 		'  `mark_status` char(1) NOT NULL DEFAULT \'N\' COMMENT \'ref_group AR:MRK_STT\',\n' +
 		'  `remark` varchar(1000) DEFAULT NULL,\n' +
@@ -190,9 +195,9 @@ const schema = (db: any) => {
 		'  `to_customer_id` varchar(50) NOT NULL,\n' +
 		'  `bankin_type` varchar(10) NOT NULL,\n' +
 		'  `amount` int(11) NOT NULL,\n' +
-		'  `point_of_interest(%)` int(11) NOT NULL,\n' +
+		'  `point_of_interest` int(11) NOT NULL,\n' +
 		'  `status` varchar(50) NOT NULL,\n' +
-		'  `number_of_month` int(11) DEFAULT NULL,\n' +
+		'  `number_of_month` int(11) NOT NULL,\n' +
 		'  `mark_status` char(1) NOT NULL DEFAULT \'N\' COMMENT \'ref_group AR:MRK_STT\',\n' +
 		'  `remark` varchar(1000) DEFAULT NULL,\n' +
 		'  PRIMARY KEY (`audit_id`)\n' +
